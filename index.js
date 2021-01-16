@@ -59,7 +59,13 @@ mongoose.connect("mongodb+srv://elif:1234@cluster1.6iubv.mongodb.net/Cluster1?re
     gorev.save(function(err){
       res.redirect("/");
     });
-  }); 
+  });
+  app.post("/sil", function(req, res){
+    var dokumanID = req.body.id;
+    Gorev.deleteOne({ _id : dokumanID }, function(err){
+        res.redirect("/");
+    })
+});
   let port = process.env.PORT;
   if(port == "" || port == null){
     port = 5000;
