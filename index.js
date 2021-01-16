@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 mongoose.connect("mongodb+srv://elif:1234@cluster1.6iubv.mongodb.net/Cluster1?retryWrites=true&w=majority"
                 , {useNewUrlParser: true , useUnifiedTopology : true});
-                var yapilacakListesi = new Schema(
+  var yapilacakListesi = new Schema(
     {
       gorev : String,
       tarih : Date
@@ -59,7 +59,7 @@ mongoose.connect("mongodb+srv://elif:1234@cluster1.6iubv.mongodb.net/Cluster1?re
     gorev.save(function(err){
       res.redirect("/");
     });
-  });
+  }); 
   let port = process.env.PORT;
   if(port == "" || port == null){
     port = 5000;
