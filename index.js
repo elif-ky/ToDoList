@@ -65,5 +65,5 @@ mongoose.connect("mongodb+srv://elif:1234@cluster1.6iubv.mongodb.net/Cluster1?re
     port = 5000;
   }
   app.listen(port, function(){
-    console.log("port : " + port);
+    console.log("port numarasi : " + port);
   });
